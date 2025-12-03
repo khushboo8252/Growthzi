@@ -1,0 +1,257 @@
+.container{
+  background-color: #fff;
+}
+.case-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1200px;  
+  margin: -160px auto 0;  
+  padding: 40px 20px 60px;  
+  font-family: "Inter", sans-serif;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #05c300;
+  border-radius: 2px;
+}
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+.case-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.case-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.case-text {
+  width: 50%;
+}
+
+.case-img img {
+  width: 520px;
+  height:300px;
+  border-radius: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: #fcecd3;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.case-text p {
+  width: 80%;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+/* Button Gradient Glow Effect */
+/* Base Button Styles */
+.view-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+  min-width: 150px;
+}
+
+/* Hover Effect */
+.view-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.view-btn:hover::after {
+  width: 100%;
+}
+
+/* Green Button */
+.view-btn.btn-green {
+  background: #00c47b;
+  box-shadow: 0 4px 15px rgba(0, 196, 123, 0.3);
+}
+
+/* Blue Button */
+.view-btn.btn-blue {
+  background: #1a49ff;
+  box-shadow: 0 4px 15px rgba(26, 73, 255, 0.3);
+}
+
+/* Orange Button */
+.view-btn.btn-orange {
+  background: #f0821c;
+  box-shadow: 0 4px 15px rgba(240, 130, 28, 0.3);
+}
+
+/* Hover States */
+.view-btn:hover {
+  transform: translateY(-2px);
+}
+
+.view-btn.btn-green:hover {
+  box-shadow: 0 6px 20px rgba(0, 196, 123, 0.4);
+}
+
+.view-btn.btn-blue:hover {
+  box-shadow: 0 6px 20px rgba(26, 73, 255, 0.4);
+}
+
+.view-btn.btn-orange:hover {
+  box-shadow: 0 6px 20px rgba(240, 130, 28, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .view-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    min-width: 130px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .case-container {
+    padding: 60px 15px;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+}
+
+/* Existing styles... */
+
+/* Tablet and Mobile */
+@media (max-width: 992px) {
+  .case-container {
+    margin-top: -60px;
+    padding: 40px 15px;
+  }
+
+  .case-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .case-row.reverse {
+    flex-direction: column;
+  }
+
+  .case-text, 
+  .case-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .case-text p {
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  .case-img {
+    margin-top: 20px;
+  }
+
+  .case-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .case-container {
+    margin-top: -40px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .view-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
